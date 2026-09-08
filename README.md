@@ -1,26 +1,41 @@
 # Hi, I'm Herui Dou
 
-MSc Business Analytics student at Nanyang Technological University (Nanyang Business School), with a Bachelor of Business in Banking & Finance from NTU. I'm looking for data scientist / data analyst / business analyst roles in Singapore, ideally where finance, risk or compliance data is involved.
+MSc Business Analytics student at Nanyang Technological University (Nanyang Business School), with a Bachelor of Business in Banking and Finance from NTU. I'm looking for a full-time data analyst, data scientist, business analyst, BI or AI transformation role in Singapore, and I can start immediately.
 
-Before the MSc I did three data-focused internships in banking and fintech: treasury reconciliation and process automation at **Tencent** (Python/SQL matching rules across 8 overseas accounts and 30k+ monthly transactions, manual-review rate cut from ~20% to under 2%), retail-banking pricing analytics and UAT at **Bank of China Singapore**, and counterparty risk / KYC data work in BOC's FI reporting team.
+What I do well is the middle of the pipeline: take a business question from a risk, finance or operations team, get the data right (grain, joins, codeframes, censoring, the things that quietly break an analysis), build the model or dashboard, and explain the result to someone who has to make a decision with it. I work in SQL, Python and R, and I use AI coding tools heavily to build prototypes, agent workflows and internal tools quickly.
+
+Before the MSc I did three data-focused internships in banking and fintech: treasury reconciliation and process automation at Tencent (Python and SQL matching rules across 8 overseas accounts and 30k+ monthly transactions; manual-review rate cut from about 20% to under 2%), retail-banking pricing analytics and UAT at Bank of China Singapore, and counterparty risk and KYC data work in BOC's FI reporting team.
 
 ## Projects
 
+### Risk and financial crime analytics
+
 | Project | What it is | Stack |
 |---|---|---|
-| [aml-transaction-monitoring](https://github.com/herui03/aml-transaction-monitoring) | Interactive AML transaction-monitoring console — rule-based typology screening (structuring, layering, round-number wires), explainable alerts, STR narrative drafts. [Live demo](https://herui03.github.io/aml-transaction-monitoring/) | JavaScript, synthetic data |
-| [ad-ops-multi-agent](https://github.com/herui03/ad-ops-multi-agent) | LangGraph multi-agent assistant for an ad sales & operations team — orchestrator + six specialist agents, RAG-grounded compliance review, human-in-the-loop approvals for budget and compliance decisions, live agent status over WebSocket | Python, LangGraph, FastAPI, React, Groq |
+| [aml-transaction-monitoring](https://github.com/herui03/aml-transaction-monitoring) | Rule-based AML monitoring on a 9.5M-transaction benchmark, measured at a real analyst budget, then compared with a gradient-boosted model. The best rule catches 0.07% of laundering at the budget; the model catches 87%. SHAP reasons per alert, a leakage check, a calibration check, and five documented mistakes | SQL, DuckDB, Python, scikit-learn, SHAP, Tableau |
+| [credit-portfolio-risk](https://github.com/herui03/credit-portfolio-risk) | Limits, concentration, early warning indicators and stress testing on 2.26M US consumer loans. The headline finding is a right-censoring bug: naive vintage default rates showed credit quality improving 90% while the book was actually deteriorating 57%. Every figure is re-derived by a mutation-tested verification script | SQL, Python, Excel, Tableau |
+| [aml-monitoring-console](https://github.com/herui03/aml-monitoring-console) | Browser-based transaction monitoring console: typology rules, explainable alerts, STR narrative drafts. [Live demo](https://herui03.github.io/aml-monitoring-console/) | JavaScript, synthetic data |
+| [sme-risk-survey-panel](https://github.com/herui03/sme-risk-survey-panel) | Nine waves of an SME insurance survey harmonised into one panel. The same variable carried three different codeframes across the decade and the same code meant two different things; the harmonisation is the deliverable. Ships with a synthetic-data generator so the pipeline runs end to end | R, ggplot2, logistic and count models |
 
-More coming — I'm moving my SAML-D AML modelling work (9.5M transactions, rules vs gradient boosting with SHAP), a credit-portfolio risk monitor and an e-commerce campaign analytics pipeline here over the next few weeks.
+### AI agents and automation
+
+| Project | What it is | Stack |
+|---|---|---|
+| [ad-ops-multi-agent](https://github.com/herui03/ad-ops-multi-agent) | Multi-agent assistant for an advertising sales and operations team: an orchestrator plans and routes to six specialist agents, compliance review is grounded in a RAG corpus, and budget or compliance decisions pause for human approval before anything is finalised | Python, LangGraph, FastAPI, React, Groq |
+| [pdf2audiobook](https://github.com/herui03/pdf2audiobook) | Small tool that turns a PDF into an audiobook with free neural voices, with chapter splitting, a CLI and a web UI | Python, Edge TTS, Gradio |
+
+An analytics-engineering project (dbt and DuckDB warehouse with 170 tests, lead scoring, and a causal-inference study on a 14M-row advertising RCT) is kept private for now; happy to walk through it.
+
+Each analysis repo keeps a `docs/` folder of things that went wrong, how they were caught, and what the fix cost. Those are usually the most useful part.
 
 ## What I work with
 
-- **Languages & querying:** SQL (Postgres / MySQL / DuckDB), Python (pandas, scikit-learn, SHAP), R
-- **Modelling & analysis:** regression, tree ensembles, model comparison and explainability, A/B and causal analysis
-- **LLM applications:** LangGraph / LangChain agent workflows, RAG, prompt design with structured JSON outputs
-- **Pipelines & BI:** dbt, DuckDB, Tableau, Power BI, Excel (Power Query, PivotTables)
-- **Domain:** treasury operations, retail banking pricing, AML / KYC, credit portfolio monitoring
+- Querying and data work: SQL (Postgres, MySQL, DuckDB), Python (pandas), R (dplyr, tidyr), Excel (Power Query, PivotTables)
+- Modelling: regression, tree ensembles, model comparison and explainability (SHAP), calibration, A/B and causal analysis
+- Pipelines and BI: dbt, DuckDB, Tableau, Power BI
+- LLM applications: LangGraph and LangChain agent workflows, RAG, prompt design with structured outputs, human-in-the-loop review
+- Domain: treasury operations and reconciliation, retail banking pricing, AML and KYC, credit portfolio monitoring, insurance survey research
 
 ## Contact
 
-[LinkedIn](https://www.linkedin.com/in/heruidou) · Singapore
+[LinkedIn](https://www.linkedin.com/in/heruidou), Singapore
