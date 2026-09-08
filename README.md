@@ -9,6 +9,7 @@ Before the MSc I did three data-focused internships in banking and fintech: trea
 | Project | What it is | Stack |
 |---|---|---|
 | [aml-transaction-monitoring](https://github.com/herui03/aml-transaction-monitoring) | Interactive AML transaction-monitoring console — rule-based typology screening (structuring, layering, round-number wires), explainable alerts, STR narrative drafts. [Live demo](https://herui03.github.io/aml-transaction-monitoring/) | JavaScript, synthetic data |
+| [ad-ops-multi-agent](https://github.com/herui03/ad-ops-multi-agent) | LangGraph multi-agent assistant for an ad sales & operations team — orchestrator + six specialist agents, RAG-grounded compliance review, human-in-the-loop approvals for budget and compliance decisions, live agent status over WebSocket | Python, LangGraph, FastAPI, React, Groq |
 
 More coming — I'm moving my SAML-D AML modelling work (9.5M transactions, rules vs gradient boosting with SHAP), a credit-portfolio risk monitor and an e-commerce campaign analytics pipeline here over the next few weeks.
 
@@ -16,6 +17,7 @@ More coming — I'm moving my SAML-D AML modelling work (9.5M transactions, rule
 
 - **Languages & querying:** SQL (Postgres / MySQL / DuckDB), Python (pandas, scikit-learn, SHAP), R
 - **Modelling & analysis:** regression, tree ensembles, model comparison and explainability, A/B and causal analysis
+- **LLM applications:** LangGraph / LangChain agent workflows, RAG, prompt design with structured JSON outputs
 - **Pipelines & BI:** dbt, DuckDB, Tableau, Power BI, Excel (Power Query, PivotTables)
 - **Domain:** treasury operations, retail banking pricing, AML / KYC, credit portfolio monitoring
 
