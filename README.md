@@ -1,43 +1,45 @@
-# Hi, I'm Herui Dou
+# Herui Dou
 
-MSc Business Analytics student at Nanyang Technological University (Nanyang Business School), with a Bachelor of Business in Banking and Finance from NTU. I'm looking for a full-time data analyst, data scientist, business analyst, BI or AI transformation role in Singapore, and I can start immediately.
+**Business analytics · Finance & operations · Reliable AI workflows**  
+Singapore · MSc Business Analytics, Nanyang Technological University  
+[LinkedIn](https://www.linkedin.com/in/heruidou)
 
-What I do well is the middle of the pipeline: take a business question from a risk, finance or operations team, get the data right (grain, joins, codeframes, censoring, the things that quietly break an analysis), build the model or dashboard, and explain the result to someone who has to make a decision with it. I work in SQL, Python and R, and I use AI coding tools heavily to build prototypes, agent workflows and internal tools quickly.
+I am exploring full-time opportunities in business/data analysis, finance and payments operations, and AI-enabled operations. My portfolio focuses on turning business rules into working tools, checking the data behind a decision, and making failures visible and explainable.
 
-Before the MSc I did three data-focused internships in banking and fintech: treasury reconciliation and process automation at Tencent (Python and SQL matching rules across 8 overseas accounts and 30k+ monthly transactions; manual-review rate cut from about 20% to under 2%), retail-banking pricing analytics and UAT at Bank of China Singapore, and counterparty risk and KYC data work in BOC's FI reporting team.
+## Choose a project for your role
 
-## Projects
+Each overview below starts with the business problem, a short demonstration, screenshots and the limits of the evidence. The repositories contain the implementation, tests and operating notes.
 
-Start with **credit-portfolio-risk** for finance and analytical controls, **sme-risk-survey-panel** for data cleaning and modelling, or **ad-ops-multi-agent** for an AI workflow prototype. The tables below link to the code, methods and demos.
+| Area | Project and business question | What to look for |
+| --- | --- | --- |
+| Payments / Finance Operations | [Payment Reconciliation](https://github.com/herui03/payment-reconciliation-workbench/blob/main/docs/HR_OVERVIEW.md) — Do the internal ledger, payment processor and bank agree? | Gross/net matching, ambiguous transactions sent for review, exception history and reproducible daily reports. Python · SQLite · Flask |
+| Revenue / Sales Operations | [Revenue & Commission](https://github.com/herui03/revenue-commission-workbench/blob/main/docs/HR_OVERVIEW.md) — What commission is owed, and why did it change? | Cash receipts, split credit, refund clawbacks, frozen period close and variance investigation. Python · SQLite · Flask |
+| Business Analysis / Change | [Merchant Onboarding Policy Lab](https://github.com/herui03/merchant-onboarding-change-lab/blob/main/docs/HR_OVERVIEW.md) — How does a policy change become testable software behavior? | Versioned requirements, evidence requests, approval controls and requirement-to-test traceability. Python · SQLite · Flask |
+| Data / Commercial Analytics | [Ecommerce Decision Analytics](https://github.com/herui03/ecommerce-decision-analytics/blob/main/docs/HR_OVERVIEW.md) — Which metrics and experiments support a decision? | Offline dashboard, metric-grain checks, time-aware lead scoring and experiment assumptions. SQL · dbt · DuckDB · Python · JavaScript |
+| AI Applications / Operations | [Ad Ops Workflow Reliability](https://github.com/herui03/ad-ops-multi-agent/blob/main/docs/HR_OVERVIEW.md) — Can an AI-assisted workflow wait for approval and recover safely? | Persisted approval gates, proposal revisions, replay protection, failure recovery and candid retrieval evaluation. LangGraph · FastAPI · SQLite · React |
 
-### Risk and financial crime analytics
+**These are independent portfolio prototypes.** The operations workflows use synthetic data and simulated actions. The ecommerce case distinguishes historical public-data artifacts from a reproducible synthetic pipeline. They are not employer systems, client engagements or claims of production impact.
 
-| Project | What it is | Stack |
-|---|---|---|
-| [aml-transaction-monitoring](https://github.com/herui03/aml-transaction-monitoring) | Rule-based AML monitoring on a 9.5M synthetic-transaction benchmark, evaluated at a fixed analyst review budget, then compared with a gradient-boosted model. The best rule catches 0.07% of laundering at the budget; the model catches 87%. SHAP reasons per alert, a leakage check, a calibration check, and five documented mistakes. [Tableau Public dashboard](https://public.tableau.com/app/profile/herui.dou/viz/AMLTransactionMonitoringRulesvsaScoredModelatAnalystCapacity/Dashboard1) | SQL, DuckDB, Python, scikit-learn, SHAP, Tableau |
-| [credit-portfolio-risk](https://github.com/herui03/credit-portfolio-risk) | Limits, concentration, early warning indicators and stress testing on 2.26M US consumer loans. The headline finding is a right-censoring bug: naive vintage default rates showed credit quality improving 90% while the book was actually deteriorating 57%. Every figure is re-derived by a mutation-tested verification script | SQL, Python, Excel, Tableau |
-| [aml-monitoring-console](https://github.com/herui03/aml-monitoring-console) | Browser-based transaction monitoring console: typology rules, explainable alerts, STR narrative drafts. [Live demo](https://herui03.github.io/aml-monitoring-console/) | JavaScript, synthetic data |
-| [sme-risk-survey-panel](https://github.com/herui03/sme-risk-survey-panel) | Nine waves of an SME insurance survey harmonised into one panel. The same variable carried three different codeframes across the decade and the same code meant two different things; the harmonisation is the deliverable. Ships with a synthetic-data generator so the pipeline runs end to end | R, ggplot2, logistic and count models |
+## How to review the work
 
-### AI agents and automation
+1. Open a project overview for a 60-second introduction.
+2. Follow the demonstration and inspect one normal path and one failure path.
+3. Use the README for setup; inspect `docs/`, tests and GitHub Actions for the supporting evidence.
 
-| Project | What it is | Stack |
-|---|---|---|
-| [ad-ops-multi-agent](https://github.com/herui03/ad-ops-multi-agent) | Portfolio prototype for a simulated advertising operations use case: an orchestrator routes to six specialist agents, with retrieval-grounded compliance checks and a human-review interface. This is a demonstration, not a production deployment or client engagement | Python, LangGraph, FastAPI, React, Groq |
-| [pdf2audiobook](https://github.com/herui03/pdf2audiobook) | Small tool that turns a PDF into an audiobook with free neural voices, with chapter splitting, a CLI and a web UI | Python, Edge TTS, Gradio |
+Recorded walkthroughs show saved runs; running an application locally allows inputs to be changed. Automated developer tests are labelled separately from external stakeholder UAT. No real payments or advertising spend are executed.
 
-An analytics-engineering project (dbt and DuckDB warehouse with 170 tests, lead scoring, and a causal-inference study on a 14M-row advertising RCT) is kept private for now; happy to walk through it.
+## Additional work
 
-Each analysis repo keeps a `docs/` folder of things that went wrong, how they were caught, and what the fix cost. Those are usually the most useful part.
+- [Credit portfolio risk](https://github.com/herui03/credit-portfolio-risk): exposure, concentration, early-warning and stress analysis.
+- [AML transaction monitoring](https://github.com/herui03/aml-transaction-monitoring): rules and scored alerts on a synthetic benchmark.
+- [AML monitoring console](https://github.com/herui03/aml-monitoring-console): an interactive synthetic-data review interface. [Browser demo](https://herui03.github.io/aml-monitoring-console/)
+- [SME survey panel](https://github.com/herui03/sme-risk-survey-panel): survey harmonisation and modelling in R.
+- [PDF to audiobook](https://github.com/herui03/pdf2audiobook): a Python text-to-speech utility.
 
-## What I work with
+These repositories contain their own methods and limitations; the five featured projects above have the most recent delivery and review notes.
 
-- Querying and data work: SQL (Postgres, MySQL, DuckDB), Python (pandas), R (dplyr, tidyr), Excel (Power Query, PivotTables)
-- Modelling: regression, tree ensembles, model comparison and explainability (SHAP), calibration, A/B and causal analysis
-- Pipelines and BI: dbt, DuckDB, Tableau, Power BI (working knowledge)
-- LLM applications: LangGraph and LangChain agent workflows, RAG, prompt design with structured outputs, human-in-the-loop review
-- Domain: treasury operations and reconciliation, retail banking pricing, AML and KYC, credit portfolio monitoring, insurance survey research
+## Development approach
 
-## Contact
+I use AI coding tools openly. For the recent portfolio work, I directed the scope and intended use; Claude Code implemented code, tests and documentation, and Codex independently reviewed selected logic and evidence and requested fixes. The repositories include reproducible demonstrations and learning exercises for practising explanations of the business rules, design choices and limitations.
 
-[LinkedIn](https://www.linkedin.com/in/heruidou), Singapore
+For a role-specific conversation or a project walkthrough, reach me on [LinkedIn](https://www.linkedin.com/in/heruidou).
